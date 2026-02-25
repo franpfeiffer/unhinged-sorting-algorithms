@@ -16,6 +16,7 @@ void sleep_sort(int arr[], int n) {
     pthread_t threads[n];
     for (int i = 0; i < n; i++) {
         int *arg = malloc(sizeof(*arg));
+        *arg = arr[i];
         if (arg == NULL) {
             perror("skill issue");
             exit(EXIT_FAILURE);
